@@ -5,9 +5,10 @@
  * @b: int to be added to a
  * Return: sum of a and b
  */
-int add(int num1, int num2)
+int add(int, int)
 {
-	int res;
+	int res,num1,num2;
+
 	res = num1 + num2;
 	return (res);
 }
