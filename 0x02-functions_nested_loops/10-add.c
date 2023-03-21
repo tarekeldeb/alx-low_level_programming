@@ -6,10 +6,10 @@
  * Return: sum of a and b
  */
 
-int add(int num1, int num2)
+int add(int a, int b)
 {
 	int res;
 
-	res = num1 + num2;
+	res = a + b;
 	return (res);
 }
