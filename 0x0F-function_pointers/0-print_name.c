@@ -13,5 +13,5 @@ void print_name(char *name, void (*f)(char *))
 		f(name);
 		name++;
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
