@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * name - list_len
+ * list_len - the number of elements in a linked list
  * @h: poitner to the head
  * Return: Number of elements of the list
  */
@@ -12,7 +12,7 @@ size_t list_len(const list_t *h)
 	while (h)
 	{
 		count++;
-		h = h -> next;
+		h = h->next;
 	}
 	return (count);
 }
