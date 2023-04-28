@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 /**
- * name - add_node_end.
+ * add_node_end - adds a new node to the end of the list.
  * @head: Pointer to a pointer.
  * @str: String to be in the new node.
  * Return: The address of the element.
@@ -24,7 +24,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new_node;
 		return (new_node);
 	}
-	
 	while (temp->next)
 		temp = temp->next;
 	temp->next = new_node;
