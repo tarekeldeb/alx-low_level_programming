@@ -3,8 +3,7 @@
 #include "lists.h"
 /**
  * free_listint - delets a list
- * @head: a pointer to the first node 
- *
+ * @head: a pointer to the first node
  * Return: nothing
  */
 void free_listint(listint_t *head)
