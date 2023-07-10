@@ -9,23 +9,17 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buff[1024];
 	int fd;
-	ssize_t written;
-	ssize_t ntext;
+	char buf[1024];
+	ssize_t nread;
 
 	fd = open(filename, O_RDONLY);
-	if (fd == -1 || filename == NULL)
+	if (fd == -1)
 		return (0);
-
-	ntext = read(fd, buff, letters);
-	if (ntext == -1)
+	nread = read(fd, buf, letters);
+	if (nread == -1)
 		return (0);
-
-	written = write(fd, buff, letters);
-	if (written == -1)
+	if (write(STDOUT_FILENO, buf, nread) != nread)
 		return (0);
-
-	close(fd);
-	return (ntext);
+	return nread;
 }
