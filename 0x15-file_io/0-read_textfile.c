@@ -12,20 +12,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char buff[1024];
 	int fd;
 	ssize_t written;
-	
-	fd = open (filename, O_RDONLY);
+	ssize_t ntext;
+
+	fd = open(filename, O_RDONLY);
 	if (fd == -1 || filename == NULL)
 		return (0);
-	else
-	{
-		ssize_t ntext = read (fd, buff, letters);
-		if (ntext == -1)
-			return (0);
-		written = write (fd, buff, letters);
-		if (written == -1)
-			return (0);
-		close (fd);
-		return (ntext);
 
-	}
+	ntext = read(fd, buff, letters);
+	if (ntext == -1)
+		return (0);
+
+	written = write(fd, buff, letters);
+	if (written == -1)
+		return (0);
+
+	close(fd);
+	return (ntext);
 }
